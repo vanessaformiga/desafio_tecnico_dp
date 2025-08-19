@@ -8,7 +8,7 @@ Este arquivo contém o cronograma com as atividades que foram desenvolvidas, par
 - [] Definir quais as perguntas que eu gostaria de fazer se fosse uma tarefa propostas;
 - [] Gravar dois vídeos sobre o desafio;
 - [] Escrever o desenho da solução;
-- [] Escrever as instuções de resolução do desafio;
+- [] Escrever as instruções de resolução do desafio;
 - [] Realizar a delimitação da proposta da análise preditiva;
 - [] Escrever os problemas que podem ser solucionados com ajuda da Inteligência Artificial;
 - [] Criar o modelo relacional;
