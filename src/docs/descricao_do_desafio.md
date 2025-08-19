@@ -5,15 +5,19 @@ A OSM é uma empresa de software para gestão de pessoas, com foco no setor púb
 busca se destacar pelo uso de inteligência artificial de ponta para melhorar processos de
 departamento pessoal (DP) e práticas de gestão de pessoas. Atualmente, possuímos bases
 de dados que incluem:
+
 - Registros de servidores (ativos e inativos)
 - Histórico de folha de pagamento
 - Frequência, ponto eletrônico e licenças
 - Histórico de treinamentos e certificações obrigatórias
 - Chamados e solicitações no sistema Mentorh
 - Pesquisas de clima organizacional
-Objetivo do Desafio
+
+
+**Objetivo do Desafio**
 
 Você deverá propor e demonstrar um projeto de aplicação de IA que:
+
 1. Analise dados reais (simulados ou gerados por você para o teste).
 2. Sugira automatizações com agentes inteligentes para tarefas corriqueiras do
 departamento pessoal.
@@ -39,7 +43,8 @@ prolongado ou queda de engajamento, usando variáveis como:
 simulada para os próximos 12 meses.
 
 
-Entrega
+**Entrega**
+
 O candidato deverá entregar:
 - Código-fonte documentado
 - Arquivo README explicando:
@@ -53,7 +58,8 @@ O candidato deverá entregar:
 - Protótipo rodando localmente ou link para repositório online (GitHub/GitLab)
 
 
-Critérios de Avaliação
+**Critérios de Avaliação**
+
 1. Aderência à realidade da OSM e ao setor público.
 2. Criatividade e inovação na aplicação da IA.
 3. Qualidade técnica: arquitetura, organização do código e escalabilidade.
