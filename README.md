@@ -7,8 +7,8 @@
 - [Sobre](#sobre)
 - [Arquitetura](#arquitetura)
 - [Bibliotecas](#bibliotecas)
-- [Testes](#testes)
 - [Instalações](#instalações)
+- [Testes](#testes)
 - [Licença](#licença)
 - [Próximos Passos](#próximos-passos)
 - [Contato](#contato)
@@ -23,6 +23,9 @@ Na solução do desafio propostos foi realizado uma definição é a delimitaç�
 
 ## Arquitetura:
 
+## Estrutura do Projeto
+
+
 ## Bibliotecas:
 
 - python
@@ -34,9 +37,36 @@ Na solução do desafio propostos foi realizado uma definição é a delimitaç�
 - uvicorn  
 
 
-## Testes:
-
 ## Instalações
+
+### Execução
+
+``````
+
+Instalções:
+
+git clone https://github.com/vanessaformiga/desafio_engenheiro_de_dados
+
+python -m venv venv
+
+venv/Scripts/activate (windows)
+
+source venv/bin/activate (linux)
+
+pip install -r requirements.txt
+
+pip freeze > requirements.txt
+
+``````
+### Execução
+
+``````
+Execução:
+Para a execução dos script:
+
+``````
+
+## Testes:
 
 ## Licença:
 
@@ -46,6 +76,7 @@ MIT License
 
 Nessa seção será incluído quais serão os próximos passos que podem ser incluídos a seguir na aplicação.
 
+- Criação do Endpoint para a solicitação das férias
 
 
 ## Contato:

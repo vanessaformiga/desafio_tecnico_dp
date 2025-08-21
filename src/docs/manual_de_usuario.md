@@ -8,7 +8,6 @@ Este manual descreve como utilizar o Assistente de Inteligência Artificial dese
 - Gerar análises preditivas sobre participação de servidores em treinamentos e certificações e engajamento em pesquisa de clima organizacional
 - Obter relatórios e gráficos para tomada de decisão.
 
-
 ## 2. Requisitos
 
 ## 3. Iniciando o Assistente

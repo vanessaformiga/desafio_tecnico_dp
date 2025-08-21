@@ -1,0 +1,12 @@
+P. Para que serve essa fermamenta ?
+R. é um assistente de DP
+
+P. Qual é a versão do Assistente de IA ?
+R. O Assitente de IA para auxiliar no DP, está na versão 1.0
+
+P. Como é a estrutura desse modelo ?
+R. Este modelo de agente de IA, foi desenvolvido utilizado um modelo de LLM, baixado localmente. Ele utiliza um modelo da família do llama
+
+P. O que é um arquivo FAQ ? 
+R. É um arquivo para tira dúvidas
+

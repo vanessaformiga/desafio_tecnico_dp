@@ -4,35 +4,37 @@ Este arquivo contém o cronograma com as atividades que foram desenvolvidas, par
 
 **A Fazer:**
 
-- [] Criar o script da criação das tabelas e conexão;
-- [] Criar o script de conexão e configuração do docke
-- [] Gravar as telas do desafio;
-- [] Gravar um vídeo
-- [] Fazer a criação do arquivo faq;
 - [] Criar o endpoint para responder perguntas sobre afastamento e licenças;
-- [] Criar o endpoint para análise preditiva  
 - [] Criar outro endpoints que pode ser post para gerar análise preditiva cuja o foco pode ser a participação nos treinamentos e certificações obrigatórias e os resultados dos servidores;
 - [] E outro endpoint também post para que possa exibir algum gráfico como saída da análise preditiva;
-- [] Criar um fluxograma da solução funcionando;
-- [] Plano de simulação para os próximos 12 meses;
 - [] Fazer a estilização da interface da API, com streamlit, react, html/css ou gradio
 - [] Fazer a criação dos teste;
+- [] Criar o endpoint para FAQ
+- [] Criar o Endpoint para para o usuário
+- [] Criar o enpoint para gerar os gráficos de assiduidade
+- [] Fazer o deploy utilizando as seguintes ferramentas in Heroku, Render ou até AWS Free Tier.
+
+
 - [] Verificar os artefatos a serem entregues;
 - [] Enviar o desafio até o dia 22/08, com o relatório e o diretório;
-- [] Fazer o deploy utilizando as seguintes ferramentas in Heroku, Render ou até AWS Free Tier.
 
 
 **Em Progresso:**
 
-
-**Concluído:**
-
-- [] Criar o arquivo do manual de uso
+-- de madruga
+- [] Atualiza a escrita do manual
 - [] Revisar a escrita do relatório
-- [] Criar a documentação do Propótico 
 - [] Ajusta a escrita do README.md e Inserir prints no README.md
 - [] Ajustar o banco
+- [] Criar um fluxograma da solução funcionando;
+- [] Plano de simulação para os próximos 12 meses;
+- [] Criar a documentação do Propótico 
+- [] Gravar as telas do desafio;
+- [] Gravar um vídeo
 
+
+
+**Concluído:**
 
 - [x] Criar o repositório no github
 - [x] Criar arquivo README.md
@@ -61,3 +63,6 @@ solucionados com IA.
 - [x] Criar o dicionário de dados;
 - [x] Verifica se a estrutura do projeto pode ser assim
 - [] Fazer o relatório;
+- [x] Criar o script da criação das tabelas e conexão;
+- [] Criar o script de conexão e configuração do docker;
+- [] Fazer a criação do arquivo faq;
