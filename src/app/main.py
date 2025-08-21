@@ -1,9 +1,5 @@
 from fastapi import FastAPI
-from api import faq
-from api import about
-# from api import faqs
-# from api import users
-# from app.agente import rag
+from api import faq, about, users, duvidas
 
 app = FastAPI(
     title="ServIA - Assistente de DP",
@@ -12,13 +8,12 @@ app = FastAPI(
 )
 
 # Routers
-app.include_router(about.router, tags=["About - Sobre a aplicação"])
-app.include_router(faq.router)  
-
+app.include_router(about.router)       # tags já definidas no router
+app.include_router(faq.router)
+app.include_router(users.router)
+app.include_router(duvidas.router)
 
 # Root
 @app.get("/", tags=["Root"])
 def read_root():
-    return {
-        "Mensagem": "Bem-vindo ao ServIA"
-    }
+    return {"Mensagem": "Bem-vindo ao ServIA"}

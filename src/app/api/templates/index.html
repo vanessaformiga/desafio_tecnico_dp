@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pergunta do RAG</title>
+</head>
+<body>
+    <h1>Pergunte ao RAG</h1>
+    <form id="form-pergunta">
+        <input type="text" id="pergunta" placeholder="Digite sua pergunta" size="50" required/>
+        <button type="submit">Enviar</button>
+    </form>
+    <div id="resposta" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <script>
+        const form = document.getElementById('form-pergunta');
+        const respostaDiv = document.getElementById('resposta');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const pergunta = document.getElementById('pergunta').value;
+
+            respostaDiv.textContent = "Carregando...";
+
+            try {
+                const response = await fetch('/rag', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ pergunta })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Erro: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                respostaDiv.textContent = data.resposta;
+            } catch (error) {
+                respostaDiv.textContent = "Erro ao obter resposta: " + error.message;
+            }
+        });
+    </script>
+</body>
+</html>

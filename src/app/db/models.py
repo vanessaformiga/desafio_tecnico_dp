@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Boolean, DECIMAL, Date, Text
 from sqlalchemy.sql import func
-from app.db.database import Base
+from db.database import Base
 
 class Orgao(Base):
     __tablename__ = "orgao"
@@ -8,13 +8,11 @@ class Orgao(Base):
     nome = Column(String(255), nullable=False)
     tipo_orgao = Column(String(50))
 
-
 class Departamento(Base):
     __tablename__ = "departamento"
     id_departamento = Column(Integer, primary_key=True, index=True)
     nome = Column(String(255), nullable=False)
     id_orgao = Column(Integer, ForeignKey("orgao.id_orgao"), nullable=False)
-
 
 class Servidor(Base):
     __tablename__ = "servidor"
@@ -25,7 +23,6 @@ class Servidor(Base):
     cargo = Column(String(100))
     data_admissao = Column(Date)
     tipo_servidor = Column(String(50))
-
 
 class DepartamentoPessoal(Base):
     __tablename__ = "departamento_pessoal"

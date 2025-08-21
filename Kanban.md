@@ -4,12 +4,9 @@ Este arquivo contém o cronograma com as atividades que foram desenvolvidas, par
 
 **A Fazer:**
 
-- [] Criar o endpoint para responder perguntas sobre afastamento e licenças;
 - [] Criar outro endpoints que pode ser post para gerar análise preditiva cuja o foco pode ser a participação nos treinamentos e certificações obrigatórias e os resultados dos servidores;
 - [] E outro endpoint também post para que possa exibir algum gráfico como saída da análise preditiva;
 - [] Fazer a estilização da interface da API, com streamlit, react, html/css ou gradio
-- [] Fazer a criação dos teste;
-- [] Criar o enpoint para gerar os gráficos de assiduidade
 - [] Fazer o deploy utilizando as seguintes ferramentas in Heroku, Render ou até AWS Free Tier.
 
 
@@ -22,12 +19,12 @@ Este arquivo contém o cronograma com as atividades que foram desenvolvidas, par
 - [] Atualiza a escrita do manual
 - [] Revisar a escrita do relatório
 - [] Ajusta a escrita do README.md e Inserir prints no README.md
-- [] Ajustar o banco
 - [] Criar um fluxograma da solução funcionando;
 - [] Plano de simulação para os próximos 12 meses;
 - [] Criar a documentação do Propótico 
 - [] Gravar as telas do desafio;
 - [] Gravar um vídeo
+- [] Talvez criar as tabelas chat e base no modelo
 
 
 
@@ -65,4 +62,9 @@ solucionados com IA.
 - [x] Fazer a criação do arquivo faq;
 - [x] Criar o endpoint para FAQ
 - [] Testar o docker
-- [] Criar o Endpoint para para o usuário
+- [x] Criar o Endpoint para para o usuário
+- [x] Criar o endpoint para responder perguntas sobre afastamento e licenças;
+- [] Criar o endpoint para gerar o relatorio
+- [] Fazer a criação dos teste;
+- [] Ajustar o banco
+- [] Ajusta para salvar o usuário que utilizou a aplicação a dúvida, salvar o usuário e salvar o historico

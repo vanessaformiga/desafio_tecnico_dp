@@ -45,7 +45,7 @@ Na solução do desafio propostos foi realizado uma definição é a delimitaç�
 
 Instalções:
 
-git clone https://github.com/vanessaformiga/desafio_engenheiro_de_dados
+git clone https://github.com/vanessaformiga/desafio_tecnico_dp
 
 python -m venv venv
 
