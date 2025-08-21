@@ -3,8 +3,9 @@
 ## 1. Introdução
 Este manual descreve como utilizar o Assistente de Inteligência Artificial desenvolvido para apoiar as rotinas do Departamento Pessoal (DP). O assistente permite:
 
-- Consultar informações sobre afastamentos e licenças.
-- Gerar análises preditivas sobre participação de servidores em treinamentos e certificações.
+- Consultar e dúvidas sobre afastamentos e licenças.
+- Gerar relatórios de Assiduidade
+- Gerar análises preditivas sobre participação de servidores em treinamentos e certificações e engajamento em pesquisa de clima organizacional
 - Obter relatórios e gráficos para tomada de decisão.
 
 

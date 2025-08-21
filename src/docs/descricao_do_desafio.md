@@ -25,23 +25,19 @@ departamento pessoal.
 preditiva de risco de afastamentos prolongados ou queda de engajamento entre servidores.
 4. Mantenha alinhamento às práticas de excelência do PNQ.
 Tarefas do Exercício
-1. Mapear 3 problemas ou ineficiências do DP no contexto do setor público que podem ser
-solucionados com IA.
-2. Criar um protótipo funcional de um agente de IA capaz de:
- - Executar pelo menos uma tarefa corriqueira automatizada (ex.: responder dúvidas
-frequentes sobre licenças ou afastamentos, gerar relatórios de frequência e assiduidade).
- - Integrar-se ou consumir dados de um banco de dados relacional (ex.:
-MySQL/PostgreSQL).
-– Demonstrar meios de interação com inserção/atualização de dados através de importação
-arquivos (registros em lote).
-3. Desenvolver um modelo preditivo que identifique servidores com risco de afastamento
-prolongado ou queda de engajamento, usando variáveis como:
- - Frequência/atrasos.
- - Participação em treinamentos obrigatórios.
- - Resultados de pesquisas de clima organizacional.
-4. Apresentar um fluxograma do funcionamento da solução e um plano de evolução
-simulada para os próximos 12 meses.
 
+
+Tarefas do Exercício 
+1. Mapear 3 problemas ou ineficiências do DP no contexto do setor público que podem ser 
+solucionados com IA. 
+2. Criar um protótipo funcional de um agente de IA capaz de: - Executar pelo menos uma tarefa corriqueira automatizada (ex.: responder dúvidas 
+frequentes sobre licenças ou afastamentos, gerar relatórios de frequência e assiduidade). - Integrar-se ou consumir dados de um banco de dados relacional (ex.: 
+MySQL/PostgreSQL).                                                                                                                                        – Demonstrar meios de interação com inserção/atualização de dados através de importação 
+arquivos (registros em lote). 
+3. Desenvolver um modelo preditivo que identifique servidores com risco de afastamento 
+prolongado ou queda de engajamento, usando variáveis como: - Frequência/atrasos. - Participação em treinamentos obrigatórios. - Resultados de pesquisas de clima organizacional. 
+4. Apresentar um fluxograma do funcionamento da solução e um plano de evolução 
+simulada para os próximos 12 meses.
 
 **Entrega**
 

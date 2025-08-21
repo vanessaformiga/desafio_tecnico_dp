@@ -46,9 +46,10 @@ MIT License
 
 Nessa seção será incluído quais serão os próximos passos que podem ser incluídos a seguir na aplicação.
 
-Fazer o 
+
 
 ## Contato:
 
 Neste projeto foi criado por Vanessa Formiga
-em caso de dúvida entre em contato vanessaformiga21@gmail.com
+
+Em caso de dúvida entre em contato vanessaformiga21@gmail.com
