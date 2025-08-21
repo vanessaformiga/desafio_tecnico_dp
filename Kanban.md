@@ -9,8 +9,6 @@ Este arquivo contém o cronograma com as atividades que foram desenvolvidas, par
 - [] E outro endpoint também post para que possa exibir algum gráfico como saída da análise preditiva;
 - [] Fazer a estilização da interface da API, com streamlit, react, html/css ou gradio
 - [] Fazer a criação dos teste;
-- [] Criar o endpoint para FAQ
-- [] Criar o Endpoint para para o usuário
 - [] Criar o enpoint para gerar os gráficos de assiduidade
 - [] Fazer o deploy utilizando as seguintes ferramentas in Heroku, Render ou até AWS Free Tier.
 
@@ -21,7 +19,6 @@ Este arquivo contém o cronograma com as atividades que foram desenvolvidas, par
 
 **Em Progresso:**
 
--- de madruga
 - [] Atualiza a escrita do manual
 - [] Revisar a escrita do relatório
 - [] Ajusta a escrita do README.md e Inserir prints no README.md
@@ -64,5 +61,8 @@ solucionados com IA.
 - [x] Verifica se a estrutura do projeto pode ser assim
 - [] Fazer o relatório;
 - [x] Criar o script da criação das tabelas e conexão;
-- [] Criar o script de conexão e configuração do docker;
-- [] Fazer a criação do arquivo faq;
+- [x] Criar o script de conexão e configuração do docker;
+- [x] Fazer a criação do arquivo faq;
+- [x] Criar o endpoint para FAQ
+- [] Testar o docker
+- [] Criar o Endpoint para para o usuário
