@@ -21,10 +21,7 @@ Este arquivo contém o cronograma com as atividades que foram desenvolvidas, par
 - [] Criar um fluxograma da solução funcionando;
 - [] Plano de simulação para os próximos 12 meses;
 - [] Criar a documentação do Propótico 
-- [] Gravar as telas do desafio;
 - [] Gravar um vídeo
-- [] Talvez criar as tabelas chat e base no modelo
-
 
 
 **Concluído:**
@@ -47,7 +44,6 @@ solucionados com IA.
 - [x] No relatório deve ser respondido três perguntas: Problema, solução e resultados e podem ser incluído quais serão os próximos passos; 
 - [x] Definir o banco a ser utilizado
 - [x] Pesquisar sobre repositórios de testes técnicos de IA ou vagas para desenvolvimento; 
-- [x] O repositório que você observa como base será o da Glaúcia
 - [x] Pesquisa modelos de relatório de uma proposta de um agente de IA 
 - [x] Verifica quais são os requisitos que precisa ter em um levantamento de requisitos de uma proposta de IA
 - [x] Definir quais as perguntas que eu gostaria de fazer se fosse uma tarefa propostas;
@@ -65,6 +61,6 @@ solucionados com IA.
 - [x] Criar o endpoint para responder perguntas sobre afastamento e licenças;
 - [] Criar o endpoint para gerar o relatorio de assiduidade
 - [x] Fazer a criação dos teste;
-- [] Ajustar o banco de dados
+- [] Ajustar o banco de dados e criar as tabelas
 - [] Ajusta para salvar o usuário que utilizou a aplicação a dúvida, salvar o usuário e salvar o historico
 - [] Revisar a escrita e relatório
