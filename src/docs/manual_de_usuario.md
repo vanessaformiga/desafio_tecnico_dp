@@ -1,29 +1,142 @@
 # Manual de Uso - Assistente de IA para Departamento Pessoal
 
-## 1. Introdução
-Este manual descreve como utilizar o Assistente de Inteligência Artificial desenvolvido para apoiar as rotinas do Departamento Pessoal (DP). O assistente permite:
+**1. Introdução**
 
-- Consultar e dúvidas sobre afastamentos e licenças.
-- Gerar relatórios de Assiduidade
-- Gerar análises preditivas sobre participação de servidores em treinamentos e certificações e engajamento em pesquisa de clima organizacional
-- Obter relatórios e gráficos para tomada de decisão.
+Este manual descreve como utilizar o Assistente de IA desenvolvido para apoiar as rotinas do Departamento Pessoal (DP). O assistente permite:
 
-## 2. Requisitos
+- Consultar dúvidas sobre afastamentos e licenças.
 
-## 3. Iniciando o Assistente
+- Gerar relatórios de assiduidade.
 
-### 3.1 
+- Buscar informações em FAQs pré-cadastradas.
 
-### 3.2 Testando a API.
+O objetivo é facilitar o acesso a informações do DP e automatizar tarefas simples.
 
-## 4. Funcionalidades do Assistente
+**2. Requisitos**
 
-## 5. Boas práticas
+- Acesso à rede corporativa (ou localhost se estiver em desenvolvimento).
 
-## 6. Suporte
+- Navegador moderno (Chrome, Edge, Firefox).
 
-Para dúvidas ou problemas:
+- A API deve estar em execução (via Docker ou uvicorn local).
+
+- Recomendável ter DBeaver para visualizar o banco de dados (MySQL/Postgres).
+
+- Para utilizar é necessário baixar o ollama e o modelo que deseja
+
+**3. Acessando a API**
+
+Certifique-se que a API está rodando em:
+
+``````
+http://localhost:8000
+
+
+Para ver os endpoints disponíveis, abra o Swagger UI:
+
+http://localhost:8000/docs
+
+``````
+
+Na tela do Swagger, você verá todos os endpoints com descrição, parâmetros e exemplos de requisição.
+
+**4. Principais Funcionalidades**
+
+**4.1 Consultar FAQ**
+
+``````
+
+Endpoint: GET /faq/
+
+Descrição: Retorna todas as perguntas e respostas cadastradas.
+
+Como usar:
+
+Acesse o Swagger /faq/.
+
+Clique em Try it out.
+
+Clique em Execute.
+
+Exemplo de retorno:
+
+[
+  {
+    "pergunta": "Como trocar a senha?",
+    "resposta": "Envie seu pedido no sistema de RH."
+  }
+]
+
+``````
+
+**4.2 Enviar nova pergunta para o FAQ**
+
+``````
+
+Endpoint: POST /faq/
+
+Descrição: Permite cadastrar uma nova pergunta e resposta.
+
+Como usar:
+
+Vá para /faq/ → POST.
+
+Clique em Try it out.
+
+Insira o JSON da pergunta:
+
+{
+  "pergunta": "Como registrar atestado?",
+  "resposta": "Envie ao DP pelo sistema interno."
+}
+
+
+Clique em Execute.
+
+``````
+
+**4.3 Consultar usuários**
+
+``````
+
+Endpoint: GET /users/
+
+Descrição: Lista os usuários cadastrados na aplicação.
+
+Como usar: acessar pelo Swagger /users/ → Try it out → Execute.
+
+``````
+
+**4.4 Login de usuário**
+
+``````
+
+Endpoint: POST /users/login
+
+Descrição: Realiza autenticação de usuário.
+
+Como usar:
+
+Acesse /users/login.
+
+Forneça email e senha.
+
+Receberá um token de autenticação (para endpoints que exigem login).
+
+``````
+
+**5. Dicas de Uso**
+
+Sempre consulte a documentação Swagger (/docs) antes de testar novos endpoints.
+
+Para consultas rápidas no banco, utilize o DBeaver.
+
+Use o modo --reload apenas em desenvolvimento.
+
+Caso encontre mensagens de erro no Swagger, verifique se a API e os bancos estão ativos.
+
+**6. Suporte**
 
 Contato: vanessaformiga21@gmail.com
 
-GitHub: https://github.com/vanessaformiga
+Para problemas técnicos, envie prints do Swagger e logs do Docker.

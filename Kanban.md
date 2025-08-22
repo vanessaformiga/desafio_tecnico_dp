@@ -4,25 +4,7 @@ Este arquivo contém o cronograma com as atividades que foram desenvolvidas, par
 
 **A Fazer:**
 
-- [] Criar outro endpoints que pode ser post para gerar análise preditiva cuja o foco pode ser a participação nos treinamentos e certificações obrigatórias e os resultados dos servidores;
-- [] E outro endpoint também post para que possa exibir algum gráfico como saída da análise preditiva;
-- [] Fazer a estilização da interface da API, com streamlit, react, html/css ou gradio
-- [] Fazer o deploy utilizando as seguintes ferramentas in Heroku, Render ou até AWS Free Tier.
-
-
-- [] Verificar os artefatos a serem entregues;
-- [] Enviar o desafio até o dia 22/08, com o relatório e o diretório;
-
-
 **Em Progresso:**
-
-- [] Atualiza a escrita do manual
-- [] Ajusta a escrita do README.md e Inserir prints no README.md
-- [] Criar um fluxograma da solução funcionando;
-- [] Plano de simulação para os próximos 12 meses;
-- [] Criar a documentação do Propótico 
-- [] Gravar um vídeo
-
 
 **Concluído:**
 
@@ -56,11 +38,30 @@ solucionados com IA.
 - [x] Criar o script de conexão e configuração do docker;
 - [x] Fazer a criação do arquivo faq;
 - [x] Criar o endpoint para FAQ
-- [x] Testar o banco
+- [x] Testar o docker
 - [x] Criar o Endpoint para para o usuário
 - [x] Criar o endpoint para responder perguntas sobre afastamento e licenças;
-- [] Criar o endpoint para gerar o relatorio de assiduidade
 - [x] Fazer a criação dos teste;
-- [] Ajustar o banco de dados e criar as tabelas
+- [x] Criar um fluxograma da solução funcionando;
+- [x] Fazer a criação e pesquisa para criar um arquivo de levantamento de requisitos
+- [x] Ajustar o banco de dados e criar as tabelas
+- [x] Criar o endpoint para gerar o relatorio de assiduidade
+- [x] Criar os endpoints para o restante do banco
 - [] Ajusta para salvar o usuário que utilizou a aplicação a dúvida, salvar o usuário e salvar o historico
+
+
+- [] Criar outro endpoints que pode ser post para gerar análise preditiva cuja o foco pode ser a participação nos treinamentos e certificações obrigatórias e os resultados dos servidores;
+- [] E outro endpoint também post para que possa exibir algum gráfico como saída da análise preditiva;
+- [] Fazer a estilização da interface da API, com streamlit, react, html/css ou gradio
+
+
+
+
 - [] Revisar a escrita e relatório
+- [] Atualiza a escrita do manual
+- [] Ajusta a escrita do README.md e Inserir prints no README.md
+- [] Altualiza o fluxograma da solução funcionado e o fluxo
+- [] Plano de simulação para os próximos 12 meses;
+
+- [] Verificar os artefatos a serem entregues;
+- [] Enviar o desafio até o dia 22/08, com o relatório e o diretório;

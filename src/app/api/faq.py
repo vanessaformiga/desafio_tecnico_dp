@@ -7,7 +7,7 @@ router = APIRouter(prefix="/faq", tags=["FAQ"])
 
 FAQ_FILE = Path(__file__).parent / "data/faq.txt"
 
-# Função para carregar FAQs do arquivo TXT
+
 def carregar_faq() -> List[FaqOut]:
     faq_list = []
     if FAQ_FILE.exists():

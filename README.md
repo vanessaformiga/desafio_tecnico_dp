@@ -75,16 +75,53 @@ pip install -r requirements.txt
 pip freeze > requirements.txt
 
 ``````
-### Execução
-
-``````
-Execução:
-Para a execução dos script:
-
+#### Python Local
 ``````
 
-### Docker
+Para a execução dos scrip na máquina 
 
+Acesse as pastas 
+
+cd src
+
+cd app
+
+e execute o comand
+
+o uvicorn main:app --reload
+
+``````
+
+#### Docker
+
+``````
+
+Rodando com Docker
+
+Subir containers (API + MySQL + Postgres):
+
+docker-compose up --build
+
+
+Adicione -d para rodar em background:
+
+docker-compose up --build -d
+
+
+Parar containers:
+
+docker-compose down
+
+
+Visualizar logs:
+
+docker-compose logs -f
+
+Acessar a API:
+
+http://localhost:8000
+
+``````
 
 ## Testes:
 

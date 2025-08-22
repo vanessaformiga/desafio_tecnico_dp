@@ -20,7 +20,7 @@ def create_access_token(data: dict):
 
 def verify_access_token(token: str):
     try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])  # verifica validade e expiração
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])  
         user_id: int = int(payload.get("sub"))
         if user_id is None:
             return None

@@ -1,5 +1,73 @@
 from pydantic import BaseModel, EmailStr
-from datetime import datetime
+from datetime import datetime, date
+from typing import Optional
+
+class OrgaoCreate(BaseModel):
+    nome: str
+    tipo_orgao: Optional[str] = None
+
+class OrgaoOut(OrgaoCreate):
+    id_orgao: int
+
+class DepartamentoCreate(BaseModel):
+    nome: str
+    id_orgao: int
+
+class DepartamentoOut(DepartamentoCreate):
+    id_departamento: int
+
+class AssiduidadeCreate(BaseModel):
+    id_servidor: int
+    data: date
+    tipo_atividade: Optional[str] = None
+    status_presenca: Optional[str] = None
+    observacao: Optional[str] = None
+
+class AssiduidadeOut(AssiduidadeCreate):
+    id_assiduidade: int
+
+class DuvidaCreate(BaseModel):
+    id_servidor: int
+
+class DuvidaOut(DuvidaCreate):
+    id_duvida: int
+    data_hora: datetime
+
+class TreinamentoCreate(BaseModel):
+    nome: str
+    descricao: Optional[str] = None
+    data_inicio: Optional[date] = None
+    data_fim: Optional[date] = None
+    observacao: Optional[str] = None
+    id_servidor: Optional[int] = None
+    id_departamento: Optional[int] = None
+
+class TreinamentoOut(TreinamentoCreate):
+    id_treinamento: int
+
+class CertificacaoCreate(BaseModel):
+    nome: str
+    descricao: Optional[str] = None
+    data_aplicacao: Optional[date] = None
+    nota_obtida: Optional[float] = None
+    gera_certificado: Optional[bool] = False
+    id_servidor: Optional[int] = None
+    id_departamento: Optional[int] = None
+
+class CertificacaoOut(CertificacaoCreate):
+    id_certificacao: int
+
+class ClimaOrganizacionalCreate(BaseModel):
+    id_departamento: int
+    id_servidor: Optional[int] = None
+    periodo: Optional[str] = None
+    data_da_realizacao: Optional[date] = None
+    indice_obtido: Optional[float] = None
+    comentarios: Optional[str] = None
+
+class ClimaOrganizacionalOut(ClimaOrganizacionalCreate):
+    id_clima: int
+
 
 # User schemas
 class UserCreate(BaseModel):

@@ -8,7 +8,10 @@ from api.core.securete import hash_password, verify_password
 from api.core.jwt import create_access_token, verify_access_token
 from api.schemas import Token  
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/users",
+    tags=["Usuário - Login/Register"]
+)
 
 
 class UserCreate(BaseModel):
@@ -20,13 +23,13 @@ class UserOut(BaseModel):
     id_usuario: int
     nome: str
     email: EmailStr
-
     model_config = {"from_attributes": True}  
 
 class UserUpdate(BaseModel):
     nome: str | None = None
     email: EmailStr | None = None
     senha: str | None = None
+
 
 
 def get_db():
@@ -37,7 +40,7 @@ def get_db():
         db.close()
 
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/users/users/login")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/users/login")
 
 def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
     user_id = verify_access_token(token)
@@ -50,13 +53,8 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
 
 
 
-router = APIRouter(
-    prefix="/users",
-    tags=["Usuário - Login\Register"]
-)
 
-
-@router.post("/users", response_model=UserOut, status_code=201)
+@router.post("/", response_model=UserOut, status_code=201)
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
     if db.query(User).filter(User.email == user.email).first():
         raise HTTPException(status_code=400, detail="Email já cadastrado")
@@ -70,12 +68,13 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
     db.refresh(new_user)
     return new_user
 
-# Listar todos os usuários
-@router.get("/users", response_model=list[UserOut])
+
+@router.get("/", response_model=list[UserOut])
 def list_users(db: Session = Depends(get_db)):
     return db.query(User).all()
 
-@router.get("/users/{user_id}", response_model=UserOut)
+
+@router.get("/{user_id}", response_model=UserOut)
 def get_user(
     user_id: int = Path(..., gt=0),
     db: Session = Depends(get_db),
@@ -86,7 +85,8 @@ def get_user(
         raise HTTPException(status_code=404, detail="Usuário não encontrado")
     return user
 
-@router.put("/users/{user_id}", response_model=UserOut)
+
+@router.put("/{user_id}", response_model=UserOut)
 def update_user(
     user_id: int,
     user_data: UserCreate,
@@ -104,7 +104,7 @@ def update_user(
     return user
 
 
-@router.patch("/users/{user_id}", response_model=UserOut)
+@router.patch("/{user_id}", response_model=UserOut)
 def patch_user(
     user_id: int,
     user_data: UserUpdate,
@@ -124,7 +124,8 @@ def patch_user(
     db.refresh(user)
     return user
 
-@router.delete("/users/{user_id}", status_code=204)
+
+@router.delete("/{user_id}", status_code=204)
 def delete_user(
     user_id: int,
     db: Session = Depends(get_db),
@@ -137,6 +138,10 @@ def delete_user(
     db.commit()
     return
 
+
+# -------------------
+# Login / Token
+# -------------------
 
 @router.post("/login", response_model=Token)
 def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):

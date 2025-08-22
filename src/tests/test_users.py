@@ -3,10 +3,10 @@ import os
 import pytest
 from fastapi.testclient import TestClient
 
-# Adiciona src/app no sys.path para conseguir importar main.py e o pacote api
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "app")))
 
-from main import app  # importa a instância FastAPI do main.py dentro de src/app
+from main import app  
 
 client = TestClient(app)
 

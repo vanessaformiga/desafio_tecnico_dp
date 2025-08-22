@@ -1,11 +1,10 @@
 from fastapi import FastAPI
-from api import faq, about, users, duvidas
+from api import faq, about, users, duvidas, assiduida, orgao_departamento, servidor, duvida, departamento_pessoal, treinamento, certificacao, clima_organizacional
 
-# Imports para criar tabelas
 from db.database import Base, engine
-from db import models  # importa todos os modelos
+from db import models 
 
-# Cria as tabelas no banco
+
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
@@ -14,13 +13,22 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Routers
+
 app.include_router(about.router)
 app.include_router(faq.router)
 app.include_router(users.router)
 app.include_router(duvidas.router)
+app.include_router(assiduida.router)
+app.include_router(orgao_departamento.router)
+app.include_router(servidor.router)
+app.include_router(duvida.router)
+app.include_router(departamento_pessoal.router)
+app.include_router(treinamento.router)
+app.include_router(certificacao.router)
+app.include_router(clima_organizacional.router)
 
-# Root
+
+
 @app.get("/", tags=["Root"])
 def read_root():
     return {"Mensagem": "Bem-vindo ao ServIA"}

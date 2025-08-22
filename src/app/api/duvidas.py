@@ -19,7 +19,7 @@ router = APIRouter(
 )
 
 templates = Jinja2Templates(directory="templates")
-qa_chain = None  # Pipeline RAG global
+qa_chain = None  
 
 
 def get_db():
