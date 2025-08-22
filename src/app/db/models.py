@@ -1,6 +1,8 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Boolean, DECIMAL, Date, Text, Numeric
+from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from db.database import Base
+from datetime import datetime
 
 class Orgao(Base):
     __tablename__ = "orgao"
@@ -102,3 +104,26 @@ class ClimaOrganizacional(Base):
     data_da_realizacao = Column(Date)
     indice_obtido = Column(Numeric(5, 2))
     comentarios = Column(Text)
+
+class HistoricoUsuario(Base):
+    __tablename__ = "historico_usuario"
+
+    id_historico = Column(Integer, primary_key=True, index=True)
+    id_usuario = Column(Integer, ForeignKey("usuario.id_usuario"), nullable=False)  # <- corrigido
+    acao = Column(String(100), nullable=False)
+    detalhe = Column(Text, nullable=True)
+    data_hora = Column(DateTime, default=datetime.utcnow)
+
+    usuario = relationship("User", backref="historicos")
+
+
+class HistoricoPergunta(Base):
+    __tablename__ = "historico_pergunta"
+
+    id_historico = Column(Integer, primary_key=True, index=True)
+    id_usuario = Column(Integer, ForeignKey("usuario.id_usuario"), nullable=False)  # <- corrigido
+    pergunta = Column(Text, nullable=False)
+    resposta = Column(Text, nullable=True)
+    data_hora = Column(DateTime, default=datetime.utcnow)
+
+    usuario = relationship("User", backref="historico_perguntas")

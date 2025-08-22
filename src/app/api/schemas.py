@@ -88,7 +88,6 @@ class UserOut(BaseModel):
     data_criacao: datetime | None
     ultimo_login: datetime | None
 
-# Login schema
 class LoginData(BaseModel):
     email: str
     senha: str
@@ -120,6 +119,34 @@ class FaqOut(BaseModel):
     id: int
     pergunta: str
     resposta: str
+
+    class Config:
+        orm_mode = True
+
+class HistoricoUsuarioBase(BaseModel):
+    acao: str
+    detalhe: str | None = None
+
+class HistoricoUsuarioCreate(HistoricoUsuarioBase):
+    id_usuario: int
+
+class HistoricoUsuarioOut(HistoricoUsuarioBase):
+    id_historico: int
+    data_hora: datetime
+
+    class Config:
+        orm_mode = True
+
+class HistoricoPerguntaBase(BaseModel):
+    pergunta: str
+    resposta: str | None = None
+
+class HistoricoPerguntaCreate(HistoricoPerguntaBase):
+    id_usuario: int
+
+class HistoricoPerguntaOut(HistoricoPerguntaBase):
+    id_historico: int
+    data_hora: datetime
 
     class Config:
         orm_mode = True

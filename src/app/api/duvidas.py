@@ -12,6 +12,9 @@ from fastapi.templating import Jinja2Templates
 import os
 import shutil
 from pydantic import BaseModel
+from db.models import HistoricoUsuario
+from db.models import HistoricoPergunta
+from api.schemas import HistoricoPerguntaOut
 
 router = APIRouter(
     prefix="/rag",
@@ -92,3 +95,56 @@ def responder_pergunta(
 @router.get("/resposta")
 def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
+
+@router.post("/duvida")
+def enviar_duvida(
+    pergunta: str,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    # Processa a pergunta normalmente...
+    
+    # Salva histórico
+    historico = HistoricoUsuario(
+        id_usuario=current_user.id_usuario,
+        acao="Pergunta",
+        detalhe=pergunta
+    )
+    db.add(historico)
+    db.commit()
+    db.refresh(historico)
+
+    return {"mensagem": "Pergunta registrada", "historico_id": historico.id_historico}
+
+@router.post("/perguntar")
+def enviar_pergunta(
+    pergunta: str,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    # Aqui você pode gerar a resposta via IA ou outro processamento
+    resposta = f"Resposta simulada para: {pergunta}"
+
+    # Salva a pergunta e resposta no histórico
+    historico = HistoricoPergunta(
+        id_usuario=current_user.id_usuario,
+        pergunta=pergunta,
+        resposta=resposta
+    )
+    db.add(historico)
+    db.commit()
+    db.refresh(historico)
+
+    return {"resposta": resposta, "historico_id": historico.id_historico}
+
+@router.get("/historico", response_model=list[HistoricoPerguntaOut])
+def listar_historico(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    historico = db.query(HistoricoPergunta).filter(HistoricoPergunta.id_usuario == current_user.id_usuario).all()
+    return historico
+
+@router.get("/chat")
+def chat_page(request: Request):
+    return templates.TemplateResponse("chat.html", {"request": request})

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat de Dúvidas</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .chat-container { max-width: 600px; margin: auto; }
+        .message { margin: 10px 0; padding: 10px; border-radius: 8px; }
+        .user { background-color: #d1e7dd; text-align: right; }
+        .bot { background-color: #f8d7da; text-align: left; }
+        input { width: 80%; padding: 10px; }
+        button { padding: 10px; }
+    </style>
+</head>
+<body>
+    <div class="chat-container" id="chat-container">
+        <!-- Mensagens serão inseridas aqui via JS -->
+    </div>
+    <input type="text" id="pergunta" placeholder="Digite sua dúvida...">
+    <button onclick="enviarPergunta()">Enviar</button>
+
+    <script>
+        const chatContainer = document.getElementById("chat-container");
+
+        // Função para carregar histórico
+        async function carregarHistorico() {
+            const response = await fetch("/rag/historico", {
+                headers: { "Authorization": "Bearer " + localStorage.getItem("token") }
+            });
+            const historico = await response.json();
+            chatContainer.innerHTML = "";
+            historico.forEach(item => {
+                const userMsg = `<div class="message user">${item.pergunta}</div>`;
+                const botMsg = `<div class="message bot">${item.resposta}</div>`;
+                chatContainer.innerHTML += userMsg + botMsg;
+            });
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // Função para enviar pergunta
+        async function enviarPergunta() {
+            const perguntaInput = document.getElementById("pergunta");
+            const pergunta = perguntaInput.value;
+            if(!pergunta) return;
+
+            const response = await fetch("/rag/perguntar", {
+                method: "POST",
+                headers: { 
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + localStorage.getItem("token")
+                },
+                body: JSON.stringify({ pergunta })
+            });
+            const data = await response.json();
+
+            chatContainer.innerHTML += `<div class="message user">${pergunta}</div>`;
+            chatContainer.innerHTML += `<div class="message bot">${data.resposta}</div>`;
+            perguntaInput.value = "";
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        carregarHistorico();
+    </script>
+</body>
+</html>

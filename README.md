@@ -142,7 +142,8 @@ MIT License
 Nessa seção será incluído quais serão os próximos passos que podem ser incluídos a seguir na aplicação.
 
 - Criação do Endpoint para a solicitação das férias
-- Fazer a interface da aplicação utilizar react
+- Fazer o deploy 
+- Ajustar o front-end
 
 
 ## Contato:

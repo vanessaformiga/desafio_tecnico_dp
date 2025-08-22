@@ -47,14 +47,9 @@ solucionados com IA.
 - [x] Ajustar o banco de dados e criar as tabelas
 - [x] Criar o endpoint para gerar o relatorio de assiduidade
 - [x] Criar os endpoints para o restante do banco
-- [] Ajusta para salvar o usuário que utilizou a aplicação a dúvida, salvar o usuário e salvar o historico
-
-
+- [x] Ajusta para salvar o usuário que utilizou a aplicação a dúvida, salvar o usuário e salvar o historico
 - [] Criar outro endpoints que pode ser post para gerar análise preditiva cuja o foco pode ser a participação nos treinamentos e certificações obrigatórias e os resultados dos servidores;
 - [] E outro endpoint também post para que possa exibir algum gráfico como saída da análise preditiva;
-- [] Fazer a estilização da interface da API, com streamlit, react, html/css ou gradio
-
-
 
 
 - [] Revisar a escrita e relatório
@@ -63,5 +58,3 @@ solucionados com IA.
 - [] Altualiza o fluxograma da solução funcionado e o fluxo
 - [] Plano de simulação para os próximos 12 meses;
 
-- [] Verificar os artefatos a serem entregues;
-- [] Enviar o desafio até o dia 22/08, com o relatório e o diretório;

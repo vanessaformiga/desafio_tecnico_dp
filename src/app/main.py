@@ -1,6 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from api import faq, about, users, duvidas, assiduida, orgao_departamento, servidor, duvida, departamento_pessoal, treinamento, certificacao, clima_organizacional
 
+
+from fastapi.templating import Jinja2Templates
 from db.database import Base, engine
 from db import models 
 
@@ -29,6 +31,12 @@ app.include_router(clima_organizacional.router)
 
 
 
+templates = Jinja2Templates(directory="templates")
+
 @app.get("/", tags=["Root"])
-def read_root():
-    return {"Mensagem": "Bem-vindo ao ServIA"}
+def read_root(request: Request):
+    return templates.TemplateResponse("home.html", {"request": request})
+
+# @app.get("/about", tags=["About"])
+# def read_about(request: Request):
+#     return templates.TemplateResponse("about.html", {"request": request})
