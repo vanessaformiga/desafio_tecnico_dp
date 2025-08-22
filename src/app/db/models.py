@@ -3,6 +3,9 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from db.database import Base
 from datetime import datetime
+from typing import List
+from sqlalchemy.orm import DeclarativeBase
+
 
 class Orgao(Base):
     __tablename__ = "orgao"
@@ -105,6 +108,29 @@ class ClimaOrganizacional(Base):
     indice_obtido = Column(Numeric(5, 2))
     comentarios = Column(Text)
 
+class ServidorClima:
+    servidor_id: int
+    departamento: str
+    pesquisas_participadas: int
+    pesquisas_totais: int
+    engajamento: float
+
+
+class ServidorTreinamento:
+    servidor_id: int
+    departamento: str
+    treinamentos_concluidos: int
+    treinamentos_totais: int
+    certificacoes_concluidas: int
+    certificacoes_totais: int
+    nota_certificacao: float
+
+
+class GraficoRequest:
+    departamentos: List[str]
+    valores: List[float]
+    titulo: str
+
 class HistoricoUsuario(Base):
     __tablename__ = "historico_usuario"
 
@@ -127,3 +153,4 @@ class HistoricoPergunta(Base):
     data_hora = Column(DateTime, default=datetime.utcnow)
 
     usuario = relationship("User", backref="historico_perguntas")
+

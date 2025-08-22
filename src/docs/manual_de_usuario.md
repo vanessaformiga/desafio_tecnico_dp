@@ -109,11 +109,9 @@ Como usar: acessar pelo Swagger /users/ → Try it out → Execute.
 
 **4.4 Login de usuário**
 
-``````
-
 Endpoint: POST /users/login
 
-Descrição: Realiza autenticação de usuário.
+Descrição: Realiza autenticação do usuário.
 
 Como usar:
 
@@ -121,9 +119,13 @@ Acesse /users/login.
 
 Forneça email e senha.
 
-Receberá um token de autenticação (para endpoints que exigem login).
+Receberá um token de autenticação (necessário para endpoints que exigem login).
 
-``````
+Observações sobre autenticação:
+
+Para autenticar, insira email e senha.
+
+O token expira em 60 minutos.
 
 **5. Dicas de Uso**
 

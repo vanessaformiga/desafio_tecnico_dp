@@ -1,8 +1,6 @@
 ┌───────────────┐
 │   Usuário     │
 │ (Front-end)   │
-│ Streamlit /   │
-│ Gradio        │
 └───────┬───────┘
         │
         ▼
@@ -45,13 +43,11 @@
 │ - PostgreSQL  │
 │ - MySQL       │
 │ Banco Vetorial│
-│ - Pinecone /  │
-│   FAISS       │
+│ - Pinecone  │
 └───────┬───────┘
         │
         ▼
 ┌───────────────┐
-│ Relatórios    │
-│ PDF / TXT     │
+│ Relatórios    │ 
 │ + gráficos    │
 └───────────────┘

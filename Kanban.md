@@ -48,13 +48,15 @@ solucionados com IA.
 - [x] Criar o endpoint para gerar o relatorio de assiduidade
 - [x] Criar os endpoints para o restante do banco
 - [x] Ajusta para salvar o usuário que utilizou a aplicação a dúvida, salvar o usuário e salvar o historico
-- [] Criar outro endpoints que pode ser post para gerar análise preditiva cuja o foco pode ser a participação nos treinamentos e certificações obrigatórias e os resultados dos servidores;
-- [] E outro endpoint também post para que possa exibir algum gráfico como saída da análise preditiva;
-
+- [x] Criar outro endpoints que pode ser post para gerar análise preditiva cuja o foco pode ser a participação nos treinamentos e certificações obrigatórias e os resultados dos servidores;
+- [x] E outro endpoint também post para que possa exibir algum gráfico como saída da análise preditiva;
+- [] Fazer ajuste na interface
+- [] Realizar o deploy da aplicação
 
 - [] Revisar a escrita e relatório
-- [] Atualiza a escrita do manual
-- [] Ajusta a escrita do README.md e Inserir prints no README.md
-- [] Altualiza o fluxograma da solução funcionado e o fluxo
+- [X] Atualiza a escrita do manual
+- [X] Ajusta a escrita do README.md e Inserir prints no README.md
+- [X] Atualiza o fluxograma da solução funcionado e o fluxo
 - [] Plano de simulação para os próximos 12 meses;
-
+- [] Mandar o Email com relatório
+- [] Verifica os artefatos

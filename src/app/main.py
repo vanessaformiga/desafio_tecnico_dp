@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request
-from api import faq, about, users, duvidas, assiduida, orgao_departamento, servidor, duvida, departamento_pessoal, treinamento, certificacao, clima_organizacional
+from api import faq, about, users, duvidas, assiduida, orgao_departamento, servidor, duvida, departamento_pessoal, treinamento, certificacao, clima_organizacional, analise_treinamento, engajamento_clima
 
 
 from fastapi.templating import Jinja2Templates
@@ -28,7 +28,8 @@ app.include_router(departamento_pessoal.router)
 app.include_router(treinamento.router)
 app.include_router(certificacao.router)
 app.include_router(clima_organizacional.router)
-
+app.include_router(analise_treinamento.router)
+app.include_router(engajamento_clima.router)
 
 
 templates = Jinja2Templates(directory="templates")

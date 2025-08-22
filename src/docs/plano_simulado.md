@@ -17,6 +17,10 @@ Objetivo: permitir interação do usuário com a aplicação, incluindo pergunta
 - Geração de Resposta (LLM)	Combina trechos recuperados com prompt do usuário e gera resposta via modelo de linguagem (LangChain/Ollama).
 - Retorno ao Usuário	Exibe resposta na interface e opcionalmente salva histórico da interação (ID do usuário + pergunta).
 - FAQ	Consulta arquivo FAQ.txt ou base de dados e retorna pergunta/resposta correspondente.
+- Geração de relatórios de presenças
+- Análise Preditica - Em treinamento, certificações obrigatórias
+- Análise Preditica - engajamento em pesquisas de clima organizacional
+- Geração de Gráficos - 
 - Fim	Fluxo finaliza após resposta.
 
 **Infraestrutura Inicial:**
@@ -45,7 +49,11 @@ Fazer com que as dúvidas sejam consultadas na internet
 
 Salvar histórico mínimo (ID do usuário + pergunta).
 
+Criar uma base com as perguntas para fazer treinamento
+
 Testes unitários e integração básica.
+
+Fazer o endpoint de solicitação de férias
 
 **Mês 4-6: Funcionalidades Avançadas**
 
@@ -59,7 +67,7 @@ Indexação de documentos com embeddings mais robusta.
 
 Integração de FAQ dinâmico (base de dados).
 
-Interface mais amigável com Streamlit/Gradio, mostrando histórico de perguntas.
+Interface mais amigável com Streamlit/Gradio ou front completo, mostrando histórico de perguntas.
 
 **Mês 7-9: Melhoria de Inteligência e Automação**
 

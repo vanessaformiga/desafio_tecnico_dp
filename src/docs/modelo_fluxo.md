@@ -1,79 +1,24 @@
-**Fluxo Geral da Solução**
+**Fluxograma da Solução**
 
-``````
-
-Início
-
-Usuário acessa a aplicação (via API ou interface web/Streamlit).
-
-Autenticação (opcional)
-
-Verifica se o usuário está logado.
-
-Se não, solicita login ou cadastro.
-
+Início → Usuário acessa a aplicação
+  ↓
+Autenticação
+  ├─ Se logado → Entrada do Usuário
+  └─ Se não logado → Solicita Login/Cadastro → depois Entrada do Usuário
+  ↓
 Entrada do Usuário
-
-Pergunta, upload de arquivo (PDF/CSV) ou solicitação de FAQ.
-
-Verificação do Tipo de Entrada
-
-Pergunta textual → direciona para módulo RAG ou FAQ.
-
-Upload de arquivo → direciona para processamento de documento.
-
-Processamento de Documento
-
-Lê o arquivo (PDF/CSV).
-
-Converte em texto.
-
-Indexa ou armazena no banco (para RAG).
-
-Módulo RAG (Recuperação de Informações)
-
-Consulta banco ou embeddings.
-
-Recupera trechos relevantes.
-
-Geração de Resposta (LLM)
-
-Combina dados recuperados + prompt do usuário.
-
-Chama modelo de linguagem (via LangChain/OlLama).
-
-Retorno ao Usuário
-
-Exibe resposta.
-
-Salva histórico da interação (opcional: somente ID do usuário e pergunta).
-
-FAQ
-
-Consulta arquivo FAQ.txt ou base de dados.
-
-Retorna pergunta/resposta correspondente.
-
+  ├─ Pergunta textual → Verificação Tipo de Entrada → Módulo RAG ou FAQ
+  │  ├─ RAG → Consulta banco/embeddings → Recupera trechos → Geração de Resposta (LLM) → Retorno ao Usuário → Salva histórico
+  │  └─ FAQ → Consulta FAQ.txt ou DB → Retorno ao Usuário → Salva pergunta no txt
+  └─ Upload de arquivo (PDF/CSV) → Processamento de Documento → Lê arquivo → Converte em texto → Indexa/Armazena no banco → Módulo RAG → Continuação como acima
+  ↓
+Gerar Relatório
+  → Gera Excel com informações de assínuidade
+↓
+Envio de Informações
+  → Permite cadastro individual ou em lote nos endpoints
+Análise Preditiva
+  → Exibe resultado
+  → Gera gráficos sobre presença em treinamentos, certificações e engajamento em pesquisas de clima
+  ↓
 Fim
-
-``````
-
-**Desenho do Fluxo**
-
-[Início]
-     |
-[Autenticação?] --Não--> [Solicitar Login]
-     |
-     Sim
-     |
-[Entrada do Usuário] --> [Tipo de Entrada?]
-                         |             |
-                     Pergunta        Arquivo
-                         |             |
-                [Módulo RAG]   [Processamento de Documento]
-                         |             |
-                  [Geração de Resposta]
-                         |
-                [Exibe Resposta / Salva Histórico]
-                         |
-                       [Fim]

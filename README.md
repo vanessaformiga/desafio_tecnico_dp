@@ -23,24 +23,29 @@ Na solução do desafio propostos foi realizado uma definição é a delimitaç�
 
 ## Arquitetura:
 
+![alt text](image.png)
+
 ## Estrutura do Projeto
 ``````
 
 DESAFIO_TECNICO_DP/
 │
 ├─ src/
-│   ├─ app/              # Código principal da aplicação (API, lógica de negócio)
-│   ├─ docs/             # Documentação interna, instruções ou diagramas
-│   ├─ testes/           # Testes unitários e de integração     # Torna src um pacote Python
-├─ docker-compose.yml    # Orquestração dos containers Docker
-├─ Dockerfile            # Imagem da aplicação
-├─ venv/                 # Ambiente virtual Python
-├─ .env                  # Variáveis de ambiente
-├─ .gitignore            # Arquivos e pastas a serem ignorados pelo Git
-├─ Kanban.md             # Planejamento ou quadro Kanban do projeto
-├─ LICENSE               # Licença do projeto
-├─ README.md             # Descrição do projeto, instruções e setup
-└─ requirements.txt      # Dependências do Python
+│  ├─ app/
+│  ├─ docs/
+│  └─ tests/
+│
+├─ venv/
+│
+├─ .env
+├─ .gitignore
+├─ docker-compose.yml
+├─ Dockerfile
+├─ image.png
+├─ Kanban.md
+├─ LICENSE
+├─ README.md
+└─ requirements.txt
 ``````
 
 ## Bibliotecas:
@@ -52,6 +57,8 @@ DESAFIO_TECNICO_DP/
 - docker
 - pytest
 - uvicorn  
+- langchain
+- ollama
 
 
 ## Instalações
@@ -86,7 +93,14 @@ cd src
 
 cd app
 
+Para criar as tabelas do histórico 
+
+execute o comando antes python create_historico
+
+e depois 
+
 e execute o comand
+
 
 o uvicorn main:app --reload
 
