@@ -4,7 +4,7 @@ Objetivo: permitir interação do usuário com a aplicação, incluindo pergunta
 
 **Fluxo Operacional:**
 
-**Etapa	**Descrição**
+**Etapa	Descrição**
 
 - Início	Usuário acessa a aplicação via API ou interface web (Streamlit/Gradio).
 - Autenticação (opcional)	Sistema verifica se usuário está logado. Se não, solicita login ou cadastro.

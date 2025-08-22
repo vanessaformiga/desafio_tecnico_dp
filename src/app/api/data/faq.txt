@@ -10,3 +10,9 @@ R. Este modelo de agente de IA, foi desenvolvido utilizado um modelo de LLM, bai
 P. O que é um arquivo FAQ ? 
 R. É um arquivo para tira dúvidas
 
+P. como pedir uma licença
+R. a licença pode ser obtida
+
+P. como solicitar a troca da senha
+R. a troca pode ser trocada pelo suporte
+
