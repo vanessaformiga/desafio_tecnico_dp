@@ -1,9 +1,8 @@
-# 1. Plano de Funcionamento Inicial (MVP)**
+# 1. Plano de Funcionamento Inicial (MVP)
 
 Objetivo: permitir interação do usuário com a aplicação, incluindo perguntas textuais, upload de documentos e consulta a FAQ, com resposta via LLM.
 
 **Fluxo Operacional:**
-
 
 **Etapa	**Descrição**
 

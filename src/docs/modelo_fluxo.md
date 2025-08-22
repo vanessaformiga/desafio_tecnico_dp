@@ -1,5 +1,7 @@
 **Fluxograma da Solução**
 
+
+``````
 Início → Usuário acessa a aplicação
   ↓
 Autenticação
@@ -22,3 +24,5 @@ Análise Preditiva
   → Gera gráficos sobre presença em treinamentos, certificações e engajamento em pesquisas de clima
   ↓
 Fim
+
+``````

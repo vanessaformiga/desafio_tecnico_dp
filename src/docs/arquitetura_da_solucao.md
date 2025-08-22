@@ -28,8 +28,6 @@ Banco vetorial → Para armazenar embeddings do FAQ e consultas RAG.
 
 Front-end (opcional):
 
-Streamlit ou Gradio → Interface para chat, visualização de relatórios e gráficos preditivos.
-
 Menu para gerar relatórios e fazer download (PDF ou TXT).
 
 **2. Fluxo de Usuário**
@@ -119,7 +117,7 @@ Backend	FastAPI, Pydantic, JWT
 Frontend (opcional)	Streamlit, Gradio
 IA / NLP	LangChain, RAG, Ollama/Hugging Face
 Banco de Dados	PostgreSQL ou MySQL
-Banco Vetorial	Pinecone, FAISS ou Weaviate
+Banco Vetorial	Pinecone, FAISS ou Weaviate,Chroma
 Relatórios	ReportLab, FPDF ou geração de TXT
 Visualização	Matplotlib, Seaborn, Plotly
 Análise Preditiva	Pandas, Scikit-learn, PyCaret

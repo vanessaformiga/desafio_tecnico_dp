@@ -63,8 +63,6 @@ DESAFIO_TECNICO_DP/
 
 ## Instalações
 
-### Execução
-
 ``````
 
 Instalções:
@@ -82,6 +80,7 @@ pip install -r requirements.txt
 pip freeze > requirements.txt
 
 ``````
+
 #### Python Local
 ``````
 
@@ -95,14 +94,13 @@ cd app
 
 Para criar as tabelas do histórico 
 
-execute o comando antes python create_historico
+execute o comando antes python create_historico.py
 
 e depois 
 
-e execute o comand
+e execute o comando
 
-
-o uvicorn main:app --reload
+uvicorn main:app --reload
 
 ``````
 
@@ -116,16 +114,13 @@ Subir containers (API + MySQL + Postgres):
 
 docker-compose up --build
 
-
 Adicione -d para rodar em background:
 
 docker-compose up --build -d
 
-
 Parar containers:
 
 docker-compose down
-
 
 Visualizar logs:
 
@@ -156,9 +151,6 @@ MIT License
 Nessa seção será incluído quais serão os próximos passos que podem ser incluídos a seguir na aplicação.
 
 - Criação do Endpoint para a solicitação das férias
-- Fazer o deploy 
-- Ajustar o front-end
-
 
 ## Contato:
 
