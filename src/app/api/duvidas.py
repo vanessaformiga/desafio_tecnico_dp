@@ -21,9 +21,7 @@ router = APIRouter(
 templates = Jinja2Templates(directory="templates")
 qa_chain = None  # Pipeline RAG global
 
-# ----------------------
-# Dependências
-# ----------------------
+
 def get_db():
     db = SessionLocal()
     try:
@@ -31,7 +29,7 @@ def get_db():
     finally:
         db.close()
 
-# Instância real de OAuth2PasswordBearer
+
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/users/login")
 
 def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
@@ -43,15 +41,10 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
         raise HTTPException(status_code=401, detail="Usuário não encontrado")
     return user
 
-# ----------------------
-# Schemas Pydantic
-# ----------------------
+
 class PerguntaInput(BaseModel):
     pergunta: str
 
-# ----------------------
-# Endpoints de RAG
-# ----------------------
 @router.post("/upload-faq")
 async def upload_faq(
     file: UploadFile = File(...), 
@@ -65,9 +58,9 @@ async def upload_faq(
 
     try:
         global qa_chain
-        # Processa o arquivo e cria/atualiza a base vetorial
+        
         vectordb = processar_arquivo_para_chroma(file_path, tipo)
-        # Cria a pipeline RAG com o Chroma
+        
         qa_chain = criar_pipeline_rag(vectordb)
 
         if qa_chain is None:
@@ -87,9 +80,9 @@ def responder_pergunta(
     if not qa_chain:
         raise HTTPException(status_code=500, detail="Base vetorial não carregada...")
     try:
-        # Executa a RAG para obter resposta
+       
         resposta = qa_chain.run(input.pergunta)
-        # Traduz a resposta para português
+        
         resposta_traduzida = GoogleTranslator(source='auto', target='pt').translate(resposta)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao processar pergunta: {str(e)}")

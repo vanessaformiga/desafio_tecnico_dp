@@ -18,12 +18,12 @@ def carregar_faq() -> List[FaqOut]:
             for line in f:
                 line = line.strip()
                 if not line:
-                    continue  # ignora linhas em branco
-                # detecta prefixos P. / P: / R. / R:
+                    continue 
+              
                 if line.lower().startswith("p.") or line.lower().startswith("p:"):
-                    current_question = line[3:].strip()  # remove P. ou P: + espaço
+                    current_question = line[3:].strip()  
                 elif line.lower().startswith("r.") or line.lower().startswith("r:"):
-                    current_answer = line[3:].strip()  # remove R. ou R: + espaço
+                    current_answer = line[3:].strip()  
                     if current_question and current_answer:
                         faq_list.append(FaqOut(id=idx, pergunta=current_question, resposta=current_answer))
                         idx += 1
@@ -33,9 +33,9 @@ def carregar_faq() -> List[FaqOut]:
 
 def adicionar_faq(faq: FaqCreate) -> FaqOut:
     with FAQ_FILE.open("a", encoding="utf-8") as f:
-        f.write(f"P. {faq.pergunta}\nR. {faq.resposta}\n\n")  # mantém formato P./R.
+        f.write(f"P. {faq.pergunta}\nR. {faq.resposta}\n\n")  
     faq_list = carregar_faq()
-    return faq_list[-1]  # retorna o último FAQ adicionado
+    return faq_list[-1] 
 
 
 

@@ -17,7 +17,6 @@ Este arquivo contém o cronograma com as atividades que foram desenvolvidas, par
 **Em Progresso:**
 
 - [] Atualiza a escrita do manual
-- [] Revisar a escrita do relatório
 - [] Ajusta a escrita do README.md e Inserir prints no README.md
 - [] Criar um fluxograma da solução funcionando;
 - [] Plano de simulação para os próximos 12 meses;
@@ -56,15 +55,16 @@ solucionados com IA.
 - [x] Criar o diagrama do banco;
 - [x] Criar o dicionário de dados;
 - [x] Verifica se a estrutura do projeto pode ser assim
-- [] Fazer o relatório;
+- [x] Fazer o relatório;
 - [x] Criar o script da criação das tabelas e conexão;
 - [x] Criar o script de conexão e configuração do docker;
 - [x] Fazer a criação do arquivo faq;
 - [x] Criar o endpoint para FAQ
-- [] Testar o docker
+- [x] Testar o banco
 - [x] Criar o Endpoint para para o usuário
 - [x] Criar o endpoint para responder perguntas sobre afastamento e licenças;
-- [] Criar o endpoint para gerar o relatorio
-- [] Fazer a criação dos teste;
-- [] Ajustar o banco
+- [] Criar o endpoint para gerar o relatorio de assiduidade
+- [x] Fazer a criação dos teste;
+- [] Ajustar o banco de dados
 - [] Ajusta para salvar o usuário que utilizou a aplicação a dúvida, salvar o usuário e salvar o historico
+- [] Revisar a escrita e relatório

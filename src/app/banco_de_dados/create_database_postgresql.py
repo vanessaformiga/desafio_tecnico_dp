@@ -17,7 +17,7 @@ POSTGRES_PATH_SQL = os.getenv("POSTGRES_PATH_SQL")
 
 
 conn = psycopg2.connect(
-    dbname="postgres",  # conecta no banco padrão
+    dbname="postgres",  
     user=POSTGRES_USER,
     password=POSTGRES_PASSWORD,
     host=POSTGRES_HOST,

@@ -25,7 +25,7 @@ class LoginData(BaseModel):
     email: str
     senha: str
 
-# --- FAQ ---
+
 
 class Token(BaseModel):
     access_token:str

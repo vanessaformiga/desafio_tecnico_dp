@@ -24,7 +24,24 @@ Na solução do desafio propostos foi realizado uma definição é a delimitaç�
 ## Arquitetura:
 
 ## Estrutura do Projeto
+``````
 
+DESAFIO_TECNICO_DP/
+│
+├─ src/
+│   ├─ app/              # Código principal da aplicação (API, lógica de negócio)
+│   ├─ docs/             # Documentação interna, instruções ou diagramas
+│   ├─ testes/           # Testes unitários e de integração     # Torna src um pacote Python
+├─ docker-compose.yml    # Orquestração dos containers Docker
+├─ Dockerfile            # Imagem da aplicação
+├─ venv/                 # Ambiente virtual Python
+├─ .env                  # Variáveis de ambiente
+├─ .gitignore            # Arquivos e pastas a serem ignorados pelo Git
+├─ Kanban.md             # Planejamento ou quadro Kanban do projeto
+├─ LICENSE               # Licença do projeto
+├─ README.md             # Descrição do projeto, instruções e setup
+└─ requirements.txt      # Dependências do Python
+``````
 
 ## Bibliotecas:
 
@@ -66,7 +83,18 @@ Para a execução dos script:
 
 ``````
 
+### Docker
+
+
 ## Testes:
+
+Para testar execute o comando 
+
+``````
+
+pytest src/tests/test_users.py --disable-warnings -v
+
+``````
 
 ## Licença:
 
@@ -77,6 +105,7 @@ MIT License
 Nessa seção será incluído quais serão os próximos passos que podem ser incluídos a seguir na aplicação.
 
 - Criação do Endpoint para a solicitação das férias
+- Fazer a interface da aplicação utilizar react
 
 
 ## Contato:

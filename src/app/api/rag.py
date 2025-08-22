@@ -5,7 +5,7 @@ def criar_pipeline_rag(vectordb):
     if vectordb is None:
         return None
 
-    llm = Ollama(model="llama3.2:1b")  # ou ou
+    llm = Ollama(model="llama3.2:1b")  
     qa_chain = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type="stuff",
